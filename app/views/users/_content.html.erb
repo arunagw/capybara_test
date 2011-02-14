@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.title %></td>
+      <td><%= link_to 'Show', user, {:class => "remote"} %></td>
+      <td><%= link_to 'Edit', edit_user_path(user), :update => {:success => "hello", :failure => "hello"} %></td>
+      <td><%= link_to 'Destroy', user, {:class => "delete"} %></td>
+    </tr>
+  <% end %>
+</table>
